@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: URW Chancery L, cursive;
     background-color: #f4f4f4;
     color: #2c5f2d;
     margin: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #5b7d5d;
     color: white;
     padding: 15px;
     text-align: center;
