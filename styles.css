@@ -53,7 +53,7 @@ section {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #5b7d5d;
     color: white;
     border: none;
     padding: 10px;
@@ -62,11 +62,11 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #5b7d5d;
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #5b7d5d;
     color: white;
     text-align: center;
     padding: 10px;
