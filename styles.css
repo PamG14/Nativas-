@@ -93,7 +93,8 @@ footer {
 }
 #cursor-img {
     position: absolute;
-    width: 50px; /* Ajusta el tamaño según necesites */
+    width: 40px; /* Ajusta el tamaño según necesites */
     pointer-events: none; /* Evita que interfiera con otros elementos */
-    transition: transform 0.1s linear;
+    transition: transform 0.2s linear;
+    background-color: none;
 }
