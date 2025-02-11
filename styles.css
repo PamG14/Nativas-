@@ -93,10 +93,11 @@ footer {
 }
 #cursor-img {
     position: absolute;
-    width: 50px;
+    width: 50px; /* Ajusta el tamaño */
     height: 50px;
-    pointer-events: none;
-    z-index: 9999;
+    pointer-events: none; /* Evita que interfiera con clics */
+    transform: translate(-50%, -50%); /* Centra la imagen en el cursor */
 }
+
 
 }
