@@ -53,11 +53,15 @@ section {
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     display: inline-block;
+    width: 200px; /* Tamaño uniforme para los productos */
+    text-align: center;
 }
 
 .producto img {
-    width: 100px;
-    height: auto;
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que encaje sin distorsionarse */
+    border-radius: 5px;
 }
 
 .precio {
