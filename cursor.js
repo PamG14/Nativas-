@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let imgX = 0, imgY = 0; // Posición de la imagen
 
     document.addEventListener("mousemove", (event) => {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
+        mouseX = event.clientX - 10; // Ajusta estos valores para acercarlo más
+        mouseY = event.clientY - 10;
+
     });
 
     function animate() {
