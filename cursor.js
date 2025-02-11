@@ -35,6 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
     animate();
 });
 
-    animate();
-});
+
 
