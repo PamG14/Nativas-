@@ -92,6 +92,7 @@ footer {
     width: 100%;
 }
 #cursor-img {
+    display: block; /* Asegura que no esté oculta */
     position: absolute;
     width: 50px; /* Ajusta el tamaño */
     height: 50px;
