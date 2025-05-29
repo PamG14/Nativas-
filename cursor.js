@@ -1,22 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cursorImg = document.getElementById("cursor-img");
-    const navbar = document.querySelector("header");
-    const footer = document.querySelector("footer");
 
     let mouseX = 0, mouseY = 0;
     let imgX = 0, imgY = 0;
+    let lastX = 0, lastY = 0;
+    let speedFactor = 0.1; // Factor de velocidad inicial
 
-    const navbarHeight = navbar.offsetHeight;
-    const footerTop = footer.offsetTop - 50; // Ajuste directo para el margen inferior
+    document.addEventListener("mousemove", (event) => {
+        mouseX = event.clientX - 10;
+        mouseY = event.clientY - 10;
 
-    document.addEventListener("mousemove", ({ clientX, clientY }) => {
-        mouseX = Math.max(0, clientX - 10);
-        mouseY = Math.min(Math.max(clientY - 10, navbarHeight), footerTop);
+        // Calcular velocidad del movimiento del cursor
+        const deltaX = Math.abs(event.clientX - lastX);
+        const deltaY = Math.abs(event.clientY - lastY);
+        const speed = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+
+        // Ajustar el factor de distancia según la velocidad del cursor
+        speedFactor = Math.min(0.5, Math.max(0.1, speed / 50));
+
+        // Almacenar posición anterior
+        lastX = event.clientX;
+        lastY = event.clientY;
     });
 
     function animate() {
-        imgX += (mouseX - imgX) * 0.3;
-        imgY += (mouseY - imgY) * 0.3;
+        imgX += (mouseX - imgX) * speedFactor;
+        imgY += (mouseY - imgY) * speedFactor;
 
         cursorImg.style.transform = `translate(${imgX}px, ${imgY}px)`;
 
